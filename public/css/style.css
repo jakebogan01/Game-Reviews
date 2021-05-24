@@ -1,0 +1,14 @@
+/* gives the cool animation to preview game title */
+.feature_list:hover .layover{
+    left: 0;
+}
+.feature_list:hover .layover_title{
+    right: 0;
+}
+.layover{
+    transition: all 0.4s ease;
+}
+.layover_title{
+    transition: all 0.4s ease;
+    transition-delay: 0.2s;
+}

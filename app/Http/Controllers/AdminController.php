@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Games;
 
-class DashboardController extends Controller
+class AdminController extends Controller
 {
     public function index(){
-        return view('dashboard');
+        return view('admin.index');
     }
 }
