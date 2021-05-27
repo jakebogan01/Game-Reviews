@@ -26,7 +26,7 @@ start navbar***
                 </li>
             </ul>
             <!-- logo -->
-            <a href="{{ route('home') }}" class="font-bold pt-1">
+            <a href="{{ route('home') }}" class="font-bold pt-1 lg:pl-24">
                 <img src="/img/svg/gamenet_logo.svg" alt="gamenet logo">
             </a>
             <ul class="flex items-center">
@@ -34,7 +34,7 @@ start navbar***
                 @auth <!-- checks if user is signed in -->
                     <li>
                         <a href="{{ route('admin') }}" class="p-3">
-                            <span class="hidden md:inline">{{ auth()->user()->name }}</span>
+                            <span class="hidden md:inline">{{ strtolower(auth()->user()->name) }}</span>
                             <i class="fa fa-user ml-1 text-lg" aria-hidden="true"></i>
                         </a>
                     </li>

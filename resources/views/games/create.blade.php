@@ -5,7 +5,7 @@ start add game form***
 -->
     <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
         <div class="w-full md:w-10/12 lg:w-6/12 bg-white p-6 rounded-lg">
-            <h1 class="text-center mb-6 text-2xl">Add Game</h1>
+            <h1 class="text-center mb-6 text-2xl font-semibold">Add Game</h1>
             <form action="{{ route('games.store') }}" method="post">
                 @csrf
                 <table class="w-full my-12 sm:my-0 ">

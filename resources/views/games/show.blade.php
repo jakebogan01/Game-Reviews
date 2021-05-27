@@ -21,7 +21,7 @@ start game details***
                             <td>
                                 <button type="submit" class="bg-blue-500 text-white px-7 py-3 rounded-lg font-medium hover:bg-blue-600">Buy &nbsp;<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></button>
                             </td>
-                            <td class="text-right">{{ $game->price }}</td>
+                            <td class="text-right">${{ $game->price }}</td>
                         </tr>
                     </table>
                 </div>
