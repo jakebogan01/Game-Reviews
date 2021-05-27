@@ -5,7 +5,7 @@ start register form***
 -->
     <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
         <div class="w-full sm:w-8/12 md:w-4/12 bg-white p-6 rounded-lg">
-            <h1 class="text-center mb-6 text-2xl">Register</h1>
+            <h1 class="text-center mb-6 text-2xl font-semibold">Register</h1>
             <form action="{{ route('register') }}" method="post">
                 @csrf
                 <div class="mb-4">

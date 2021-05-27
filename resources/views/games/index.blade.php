@@ -29,14 +29,14 @@ start game menu***
                 <h1 class="mb-4 text-3xl font-semibold">Other Games</h1>
                 <div class="grid grid-cols-2 gap-6">
                     <!-- showcase 10 games only -->
-                    @foreach($games as $game)
+                    @foreach($games as $i => $game)
                         <a href="{{ route('games.show',$game->id) }}" @if ($loop->first) class="hidden" @endif>
                             <div class="w-full h-28 md:h-40 cursor-pointer rounded-lg relative overflow-hidden text-center flex justify-center items-center feature_list pl-2" style="background-image: url('{{ $game->url }}'); background-repeat: no-repeat; background-size: cover; background-position: top center;">
                                 <div class="bg-gray-900 bg-opacity-90 w-full h-full absolute -left-full layover"></div>
                                 <h2 class="text-white relative -right-full z-10 layover_title text-md md:text-2xl">{{ $game->title }}</h2>
                             </div>
                         </a>
-                        @if ($game->id >= 11 && !$more)
+                        @if ($i >= 10 && !$more)
                             <!-- only shows 10 games -->
                             @break
                         @endif

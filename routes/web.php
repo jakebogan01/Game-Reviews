@@ -18,12 +18,13 @@ use App\Http\Controllers\GamesController;
 |
 */
 
-// show admin panel view
-// Route::get('/admin',function(){
-//     return view('admin.index');
-// })->name('admin');
+// show admin panel
 Route::get('/admin',[AdminController::class,'index'])->name('admin')->middleware('auth');
+// update user
+Route::post('/admin',[AdminController::class,'update'])->name('edit')->middleware('auth');
 
+// rollback deleted data
+Route::post('/delete',[GamesController::class,'restore'])->name('rollback');
 
 // show the logout view
 Route::post('/logout',[LogoutController::class,'store'])->name('logout');

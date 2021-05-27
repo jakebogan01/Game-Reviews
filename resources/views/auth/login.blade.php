@@ -5,7 +5,7 @@ start login form***
 -->
     <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
         <div class="w-full sm:w-8/12 md:w-4/12 bg-white p-6 rounded-lg">
-            <h1 class="text-center mb-6 text-2xl">Login</h1>
+            <h1 class="text-center mb-6 text-2xl font-semibold">Login</h1>
             <!-- indicate if form was valid -->
             @if (session('status'))
                 <div class="bg-red-500 p-4 rounded-lg mb-6 text-white text-center">
@@ -43,7 +43,7 @@ start login form***
                 </div>
                 <!-- login button -->
                 <div>
-                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded-lg font-medium w-full hover:bg-blue-600">Lgoin</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded-lg font-medium w-full hover:bg-blue-600">Login</button>
                 </div>
             </form>
         </div>

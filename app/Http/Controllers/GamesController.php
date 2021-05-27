@@ -70,4 +70,11 @@ class GamesController extends Controller
 
         return redirect('/delete')->with('status','Delete Successful!');
     }
+
+    public function restore(){
+        Games::onlyTrashed()->restore();
+
+        //redirect user
+        return redirect('/delete')->with('status','Rollback Successful!');
+    }
 }
