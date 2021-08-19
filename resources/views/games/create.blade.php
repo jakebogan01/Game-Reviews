@@ -3,8 +3,8 @@
 <!--
 start add game form***
 -->
-    <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
-        <div class="w-full md:w-10/12 lg:w-6/12 bg-white p-6 rounded-lg">
+    <div class="px-4 mt-28 mb-8 mx-2 md:mx-0">
+        <div class="max-w-screen-md mx-auto bg-white p-6 rounded-lg">
             <h1 class="text-center mb-6 text-2xl font-semibold">Add Game</h1>
             <form action="{{ route('games.store') }}" method="post">
                 @csrf
@@ -97,6 +97,9 @@ start add game form***
                     <button type="submit" class="bg-blue-500 text-white px-4 py-3 rounded-lg font-medium w-full hover:bg-blue-600">Submit</button>
                 </div>
             </form>
+            <div class="mt-10 mb-4 flex justify-between">
+                <a href="{{ route('admin') }}" class="focus:outline-none bg-gray-900 text-white px-4 py-3 rounded-lg font-medium text-md hover:bg-white hover:text-gray-900 border-2 border-gray-900"><i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp; Go Back</a>
+            </div>
         </div>
     </div>
 <!--

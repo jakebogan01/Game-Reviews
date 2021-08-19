@@ -2,8 +2,8 @@
 <!--
 start game menu***
 -->
-    <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
-        <div class="w-12/12 md:w-10/12 lg:w-8/12 bg-white p-6 rounded-lg">
+    <div class="mt-28 mb-8 mx-2 px-4 md:mx-0">
+        <div class="max-w-screen-lg mx-auto bg-white p-6 rounded-lg">
             @if (count($games) == 0)
                 <div>
                     <h1 class="mb-4 text-3xl font-semibold text-center">There are no current games at the moment!</h1>
@@ -14,7 +14,7 @@ start game menu***
                     <h1 class="mb-4 text-3xl font-semibold">Featured Games</h1>
                     @foreach($games as $game)
                         <a href="{{ route('games.show',$game->id) }}">
-                            <div class="w-full h-48 md:h-80 cursor-pointer rounded-lg relative overflow-hidden flex justify-center items-center my-6 feature_list" style="background-image: url('{{ $game->url }}'); background-repeat: no-repeat; background-size: cover; background-position: bottom center;">
+                            <div class="w-full h-48 md:h-80 cursor-pointer rounded-lg relative overflow-hidden flex justify-center items-center my-6 feature_list bg-center bg-no-repeat bg-cover" style="background-image: url('{{ $game->url }}');">
                                 <div class="bg-gray-900 bg-opacity-90 w-full h-full absolute -left-full layover"></div>
                                 <h2 class="text-white relative -right-full z-10 layover_title text-2xl">{{ $game->title }}</h2>
                             </div>
@@ -31,7 +31,7 @@ start game menu***
                     <!-- showcase 10 games only -->
                     @foreach($games as $i => $game)
                         <a href="{{ route('games.show',$game->id) }}" @if ($loop->first) class="hidden" @endif>
-                            <div class="w-full h-28 md:h-40 cursor-pointer rounded-lg relative overflow-hidden text-center flex justify-center items-center feature_list pl-2" style="background-image: url('{{ $game->url }}'); background-repeat: no-repeat; background-size: cover; background-position: top center;">
+                            <div class="w-full h-28 sm:h-40 md:h-44 lg:h-56 cursor-pointer rounded-lg relative overflow-hidden text-center flex justify-center items-center feature_list pl-2 bg-center bg-no-repeat bg-cover" style="background-image: url('{{ $game->url }}');">
                                 <div class="bg-gray-900 bg-opacity-90 w-full h-full absolute -left-full layover"></div>
                                 <h2 class="text-white relative -right-full z-10 layover_title text-md md:text-2xl">{{ $game->title }}</h2>
                             </div>

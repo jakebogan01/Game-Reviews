@@ -16,55 +16,57 @@
 <!--
 start navbar***
 -->
-        <nav class="p-6 bg-white flex justify-between fixed top-0 left-0 w-full z-50">
-            <ul class="items-center hidden lg:flex">
-                <li>
-                    <a href="{{ route('home') }}" class="p-3">
-                        Games
-                        <i class="fa fa-gamepad ml-1 text-lg" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-            <!-- logo -->
-            <a href="{{ route('home') }}" class="font-bold pt-1 lg:pl-24">
-                <img src="/img/svg/gamenet_logo.svg" alt="gamenet logo">
-            </a>
-            <ul class="flex items-center">
+        <nav class="bg-white fixed top-0 left-0 w-full z-50">
+            <div class="max-w-screen-lg flex justify-between mx-auto p-6">
+                <ul class="items-center hidden lg:flex">
+                    <li>
+                        <a href="{{ route('home') }}" class="p-3">
+                            Games
+                            <i class="fa fa-gamepad ml-1 text-lg" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- logo -->
+                <a href="{{ route('home') }}" class="font-bold pt-1 lg:pl-24">
+                    <img src="/img/svg/gamenet_logo.svg" alt="gamenet logo">
+                </a>
+                <ul class="flex items-center">
 
-                @auth <!-- checks if user is signed in -->
-                    <li>
-                        <a href="{{ route('admin') }}" class="p-3">
-                            <span class="hidden md:inline">{{ strtolower(auth()->user()->name) }}</span>
-                            <i class="fa fa-user ml-1 text-lg" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <!-- prevents cross site scripting to log out users -->
-                        <form action="{{ route('logout') }}" method="post" class="inline p-3">
-                            @csrf
-                            <button class="focus:outline-none" type="submit">
-                                <span class="hidden md:inline">Logout</span>
-                                <i class="fa fa-sign-out ml-1 text-lg" aria-hidden="true"></i>
-                            </button>
-                        </form>
-                    </li>
-                @endauth
+                    @auth <!-- checks if user is signed in -->
+                        <li>
+                            <a href="{{ route('admin') }}" class="p-3">
+                                <span class="hidden md:inline">{{ strtolower(auth()->user()->name) }}</span>
+                                <i class="fa fa-user ml-1 text-lg" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <!-- prevents cross site scripting to log out users -->
+                            <form action="{{ route('logout') }}" method="post" class="inline p-3">
+                                @csrf
+                                <button class="focus:outline-none" type="submit">
+                                    <span class="hidden md:inline">Logout</span>
+                                    <i class="fa fa-sign-out ml-1 text-lg" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </li>
+                    @endauth
 
-                @guest <!-- checks if user is not signed in -->
-                    <li>
-                        <a href="{{ route('login') }}" class="p-3">
-                            <span class="hidden md:inline">Login</span>
-                            <i class="fa fa-sign-in ml-1 text-lg" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ route('register') }}" class="p-3">
-                            <span class="hidden md:inline">Register</span>
-                            <i class="fa fa-user-plus ml-1 text-lg" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                @endguest
-            </ul>
+                    @guest <!-- checks if user is not signed in -->
+                        <li>
+                            <a href="{{ route('login') }}" class="p-3">
+                                <span class="hidden md:inline">Login</span>
+                                <i class="fa fa-sign-in ml-1 text-lg" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}" class="p-3">
+                                <span class="hidden md:inline">Register</span>
+                                <i class="fa fa-user-plus ml-1 text-lg" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
         </nav>
 <!--
 end navbar***

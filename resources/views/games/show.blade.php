@@ -3,12 +3,12 @@
 <!--
 start game details***
 -->
-    <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
-        <div class="w-full md:w-10/12 lg:w-8/12 bg-white p-6 rounded-lg">
+    <div class="mt-28 mb-8 mx-2 px-4 md:mx-0">
+        <div class="max-w-screen-lg mx-auto bg-white p-6 rounded-lg">
             <div class="flex flex-col sm:flex-row">
                 <div class="w-full">
                     <!-- game banner -->
-                    <div class="w-full sm:w-4/5 h-52 rounded-lg relative overflow-hidden" style="background-image: url('{{ $game->url }}'); background-repeat: no-repeat; background-size: cover; background-position: bottom center;"></div>
+                    <div class="w-full sm:w-4/5 h-52 rounded-lg relative overflow-hidden bg-center bg-no-repeat bg-cover" style="background-image: url('{{ $game->url }}');"></div>
                 </div>
                 <div class="w-full sm:pl-10 flex flex-col justify-between">
                     <h1 class="my-8 sm:my-0 sm:mb-4 text-3xl font-semibold text-center">{{ $game->title }}</h1>
@@ -35,8 +35,8 @@ end game details***
 <!--
 start game description***
 -->
-    <div class="flex justify-center mb-8 mx-2 md:mx-0">
-        <div class="w-12/12 md:w-10/12 lg:w-8/12 bg-white p-6 rounded-lg">
+    <div class="mb-8 mx-2 md:mx-0 px-4">
+        <div class="max-w-screen-lg mx-auto bg-white p-6 rounded-lg">
             <h2 class="mb-4 text-3xl font-semibold">Description</h2>
             <p class="my-7">{{ $game->description }}</p>
             <div class="pb-4 pt-5">

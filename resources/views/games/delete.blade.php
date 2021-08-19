@@ -3,8 +3,8 @@
     <!--
     start delete menu***
     -->
-        <div class="flex justify-center mt-28 mb-8 mx-2 md:mx-0">
-            <div class="w-12/12 md:w-10/12 lg:w-8/12 bg-white p-6 rounded-lg">
+        <div class="px-4 mt-28 mb-8 mx-2 md:mx-0">
+            <div class="max-w-screen-lg mx-auto bg-white p-6 rounded-lg">
                 <table class="w-full my-12 sm:my-0">
                     <tr class="text-left">
                         <th class="py-2 pl-3">#</th>
